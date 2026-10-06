@@ -1,0 +1,44 @@
+### Criar produto
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Notebook Lenovo",
+  "description": "Notebook para uso profissional",
+  "price": 3499.90,
+  "stock": 10
+}
+
+### Listar produtos
+GET http://localhost:8080/products
+
+### Buscar produto por ID
+GET http://localhost:8080/products/1
+
+### Atualizar produto
+PUT http://localhost:8080/products/2
+Content-Type: application/json
+
+{
+  "name": "Notebook Lenovo ThinkPad",
+  "description": "Notebook profissional atualizado",
+  "price": 3899.90,
+  "stock": 8
+}
+
+### Excluir produto
+DELETE http://localhost:8080/products/2
+
+### Testar validação
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "",
+  "description": "",
+  "price": -100,
+  "stock": -5
+}
+
+### Produto inexistente
+GET http://localhost:8080/products/99999
